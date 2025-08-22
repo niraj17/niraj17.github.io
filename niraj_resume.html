@@ -44,16 +44,23 @@
         }
         .section {
             margin-bottom: 10px;
-            page-break-inside: avoid;
         }
         hr {
             border: 0;
             border-top: 1px solid #ccc;
             margin: 5px 0;
         }
+      .footnote {
+                font-size: 8px;
+                color: #666;
+                text-align: center;
+                margin-top: 5px;
+                page-break-inside: avoid;
+        }
+
         .job {
             margin-bottom: 8px;
-            page-break-inside: avoid;
+
         }
         .job ul {
             margin-bottom: 3px;
@@ -103,7 +110,7 @@
         <div class="section">
             <h2>Contact</h2>
             <p>Email: niraj17@iitbombay.org</p>
-            <p>Phone: (91) 9900651697</p>
+            <p>Phone: (+91) 9900651697</p>
             <p>LinkedIn: <a href="https://linkedin.com/in/niraj17" target="_blank">linkedin.com/in/niraj17</a></p>
         </div>
         <hr>
@@ -111,8 +118,10 @@
         <!-- Professional Summary -->
         <div class="section">
             <h2>Professional Summary</h2>
-            <p>Accomplished Senior Technical Lead with over 20 years of experience in system software development, specializing in data storage systems, operating systems, and low-level programming. 
-<p> Proven expertise in leading cross-functional teams to deliver high-performance solutions, including optimizing system architectures that improved performance significantly. Adept at driving innovation, mentoring engineers, and aligning technical strategies with business objectives to deliver scalable, reliable software systems.</p>
+            <p>Accomplished technical leader with over 20 years of experience in system software development, specializing in data storage systems, operating systems, and low-level programming.  Indepth experience working on all parts of techology stack, from low level hardware to web browser.
+
+<p><i> Open source software author and contributor to linux kernel. </i>
+<p> Experience in leading cross-functional teams to deliver high-performance solutions, mentoring engineers, and aligning technical strategies with business objectives to deliver scalable, reliable software systems.</p>
         </div>
         <hr>
         
@@ -125,13 +134,13 @@
         <hr>
         
         <!-- Page Break for Second Page -->
-        <div class="page-break"></div>
+        <!-- <div class="page-break"></div>   -->
         
         <!-- Skills -->
         <div class="section">
-            <h2>Skills</h2>
+            <h2>Core Skills</h2>
             <ul>
-                <li>Data Storage systems, filesystems, Database, Linux kernel, Distributed Systems
+                <li>Data Storage systems, Filesystems, Linux kernel, Distributed Systems, Database
                 <li> <b>Programming Languages</b>: C/C++, Python, Java</li>
                 <li><b>Tools</b>: Kubernets, Docker, Git, ClearCase
                 <li>Team Leadership and Mentoring</li>
@@ -145,16 +154,20 @@
             <h2>Work Experience</h2>
                  (<i>Most recent, in reverse chronological order) </i>
                 <div class="job">
-                    <h3>DDN India, Bangalore (<i>Aug, 2018 - till date </i>)</h3>
+                    <h3>DDN India, Bangalore (<i>Aug, 2018 - till date</i>)</h3>
                     <ul>
                         <li><b><a href=https://www.ddn.com/products/infinia/>Infinia</a> </b>- Leading the development of discovery, cluster infrastruture and SDK of Infinia storage product, which is focussed on high performance AI workloads.</li>
-                        <li><b><a href=https://www.ddn.com/products/intelliflash/> Intelliflash </a> </b> - Leading core kernel changes and Clustering/HA </li>
+                        <li><b><a href=https://www.ddn.com/products/intelliflash/> Intelliflash </a> </b> - Leading the development of core kernel changes and Clustering/HA </li>
+                    <ul>  
+                          <li> Improvements in NVMe driver for namespace reservation
+                          <li> Improvement in cluster downtime by maintaining checksum of core configuration
+                    </ul>
                     </ul>
                 </div>
                 <div class="job">
-                    <h3>Cisco, Bangalore (<i>June, 2016 - Aug, 2018 </i>)</h3>
+                    <h3>Cisco, Bangalore (<i>June, 2016 - Aug, 2018</i>)</h3>
                     <ul>
-                        <li><b>ACI development team </b>- Working with ACI (Application Centric Infrastructure) team on the APIC controller development. This
+                        <li><b><a href=https://www.cisco.com/site/us/en/products/networking/cloud-networking/application-centric-infrastructure/index.html>ACI development team</a></b>- Working with ACI (Application Centric Infrastructure) team on the APIC controller development. This
  involves working on clustering, data partitioning and replication and other similar aspects of controller
  development.
                     Cisco ACI is the leading SDN in the industry and provides extensive integration with different
@@ -163,9 +176,9 @@
                 </ul>
                 </div>
                 <div class="job">
-                     <h3>NetApp, Bangalore (<i>Aug, 2010 - June, 2016 </i>)</h3>
+                     <h3>NetApp, Bangalore (<i>Aug, 2010 - June, 2016</i>)</h3>
                      <ul>
-                        <li><b>WAFL/ONTAP development and performance team</b> - Worked with various projects within WAFL organization including :
+                        <li><b><a href=https://www.netapp.com/ontap-data-management-software/>WAFL/ONTAP development and performance team</a></b> - Worked with various projects within WAFL organization including :
                             <ul>
                                 <li> <b>Storage modelling and layout </b>: Modelling storage system for a defined workload and to
  recommend best possible workload layout topology based on workload constraints, storage
@@ -178,8 +191,8 @@
                     </ul>
                 </div>
                 <div class="job">
-                    <h3>IBM Rational, Bangalore (<i>Nov, 2006 - Aug, 2010 </i>)</h3>
-                     <ul><b> Multi Version File System Development: </b>
+                    <h3>IBM Rational, Bangalore (<i>Nov, 2006 - Aug, 2010</i>)</h3>
+                     <ul><b><a href=https://www.ibm.com/docs/en/clearcase/11.0.0?topic=views-multiversion-file-system> Multi Version File System Development</a></b>
                           worked on the development of MVFS (Multi Version File System) at IBM Rational. MVFS is a
  component of ClearCase which plugs-in as a kernel module (kernel extension) on the underlying OS.
  Supported platforms includes AIX, Linux, Solaris, Windows and HP-UX
@@ -200,7 +213,7 @@ avoidance".
         <!-- Certifications -->
         <div class="section">
                 <h2>Contributions to open source</h2>
-                 I have contributed to open source mutiple times. Some examples:
+                 I have contributed to open source multiple times. Some examples:
                 <ul>
                     <li>My contribution to Linux kernel is mentioned in the kernel source code (See <a href=https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/fs/ufs/super.c?h=v6.16.2#n61>fs/ufs/super.c</a>) </li>
                     <li><a href=https://lwn.net/Articles/71667/> https://lwn.net/Articles/71667/ </a></li>
@@ -208,5 +221,10 @@ avoidance".
                 </ul>
         </div>
     </div>
+  <div class="footnote">
+        <p>Please see <a href=https://niraj17.github.io/niraj_resume.html> https://niraj17.github.io/niraj_resume.html </a> for the latest version of this document.
+</p>
+    </div>
+
 </body>
 </html>
