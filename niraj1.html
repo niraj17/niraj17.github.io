@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niraj's Resume</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 15px;
+            line-height: 1.4;
+            font-size: 12px;
+            color: #000;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            border: 1px solid #ccc;
+            padding: 15px;
+            page-break-inside: avoid;
+        }
+        .left-column {
+            width: 30%;
+            padding: 15px;
+            background-color: #f4f4f4;
+        }
+        .right-column {
+            width: 70%;
+            padding: 15px;
+        }
+        h1, h2, h3 {
+            margin: 0 0 5px;
+        }
+        h1 {
+            font-size: 20px;
+        }
+        h2 {
+            font-size: 16px;
+            color: #333;
+        }
+        h3 {
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+        ul {
+            margin: 0 0 5px;
+            padding-left: 15px;
+        }
+        .section {
+            margin-bottom: 10px;
+            page-break-inside: avoid;
+        }
+        .contact-info p {
+            margin: 3px 0;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 5px 0;
+        }
+        .work-experience ul {
+            margin-bottom: 3px;
+        }
+        .work-experience .job {
+            margin-bottom: 8px;
+            page-break-inside: avoid;
+        }
+        .work-experience p {
+            margin: 1px 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media print {
+            body {
+                margin: 0;
+                padding: 10px;
+            }
+            .container {
+                border: none;
+                width: 100%;
+                max-width: 900px;
+            }
+            .left-column {
+                background-color: #f4f4f4 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            a {
+                color: #0066cc; /* Keep blue color for links in PDF */
+                text-decoration: underline; /* Underline to indicate clickability */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <h1>Niraj Kumar</h1>
+            <hr>
+            
+            <div class="section contact-info">
+                <h2>Contact</h2>
+                <p>Email: niraj17@iitbombay.org, niraj17@gmail.com</p>
+                <p>Phone: (+91) 9900651697</p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/niraj17" target="_blank">linkedin.com/in/niraj17</a></p>
+            </div>
+            <hr>
+            
+            <div class="section">
+                <h2>Education</h2>
+                <h3><a href=https://www.iitb.ac.in/>Indian Institute of Technology, Bombay</a></h3>
+                <p> B Tech (Mech), Graduated in May, 1999 </p>
+            </div>
+            <hr>
+            
+            <div class="section">
+                <h2>Core Skills</h2>
+                <ul>
+                    <li>Data Storage systems, Filesystems, Linux kernel, Distributed Systems, Database
+</li>
+                    <li> <b>Programming Languages</b>: C/C++, Python, Java</li>
+                    <li><b>Tools</b>: Kubernets, Docker, Git, ClearCase</li>
+                    <li>Team leadership and mentoring</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Right Column -->
+        <div class="right-column">
+            <div class="section">
+                <h2>Professional Summary</h2>
+                <p>A seasoned technical leader with 20+ years of experience in system software development - specializing in data storage systems, operating systems and distributed systems. Looking for a role in a collaborative, innovation-driven company where I can architect scalable solutions and foster a culture of technical excellence.
+</p>
+            </div>
+            <hr>
+            
+            <div class="section work-experience">
+                <h2>Work Experience</h2>
+                (<i>Most recent, in reverse chronological order) </i>
+                <div class="job">
+                    <h3>DDN India, Bangalore (<i>Aug, 2018 - till date</i>)</h3>
+                    <ul>
+                        <li>  <b><a href=https://www.ddn.com/products/infinia/>Infinia</a> </b>- Working on development of discovery, cluster infrastruture and SDK of Infinia storage product, which is focussed on high performance AI workloads.</li>
+                        <li><b><a href=https://www.ddn.com/products/intelliflash/> Intelliflash </a> </b> - Working on core kernel changes and Clustering/HA</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3>Cisco, Bangalore (<i>June, 2016 - Aug, 2018</i>)</h3>
+                    <ul>
+                        <li><b>ACI development team </b>- Working with ACI (Application Centric Infrastructure) team on the APIC controller development. This
+ involves working on clustering, data partitioning and replication and other similar aspects of controller
+ development.
+                    Cisco ACI is the leading SDN in the industry and provides extensive integration with different
+ component in the datacenter, including support for Cloud and Virtualization (VMware and Redhat).
+                 </li>
+                </ul>
+                </div>
+                <div class="job">
+                     <h3>NetApp, Bangalore (<i>Aug, 2010 - June, 2016</i>)</h3>
+                     <ul>
+                        <li><b>WAFL/ONTAP development and performance team</b> - Worked with various projects within WAFL organization including :
+                            <ul>
+                                <li> <b>Storage modelling and layout </b>: Modelling storage system for a defined workload and to
+ recommend best possible workload layout topology based on workload constraints, storage
+ constraints and user provided constraints for clustered Data ONTAP.
+                                <li> <b>ActiveObject development</b> - a feature to find most active objects in storage system.
+                                <li> Some aspects of storage QoS 
+                                <li> <b>DeDuplication development team </b> - Background Deduplication development - impact of BG dedup on client performance.
+                            </ul>
+                       </li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3>IBM Rational, Bangalore (<i>Nov, 2006 - Aug, 2010</i>)</h3>
+                     <ul><b> Multi Version File System Development </b>
+                          worked on the development of MVFS (Multi Version File System) at IBM Rational. MVFS is a
+ component of ClearCase which plugs-in as a kernel module (kernel extension) on the underlying OS.
+ Supported platforms includes AIX, Linux, Solaris, Windows and HP-UX
+                    <ul>
+                        <li>  support for the new AIX virtualization environment, called WPAR (
+ Workload Partition)</li>
+                        <li> a userspace filesystem on Linux using FUSE framework to do filesystem auditing and "build
+avoidance".
+ <li> Worked on enabling ClearCase on  Cloud platform</li>
+                    </ul>
+                     </ul>
+                </div>
+            </div>
+            <hr>
+            
+            <div class="section">
+                <h2>Contributions to open source</h2>
+                 I have contributed to open source multiple times. Some examples:
+                <ul>
+                    <li>My contribution to Linux kernel is mentioned in the kernel source code (See <a href=https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/fs/ufs/super.c?h=v6.16.2#n61>fs/ufs/super.c</a>) </li>
+                    <li><a href=https://lwn.net/Articles/71667/> https://lwn.net/Articles/71667/ </a></li>
+                    <li><a href=https://lwn.net/Articles/310369/> https://lwn.net/Articles/310369/</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
