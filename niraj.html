@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niraj's Resume</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 12px;
+            line-height: 1.4;
+            font-size: 12px;
+            color: #000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            border: 1px solid #ccc;
+            padding: 12px;
+            page-break-inside: avoid;
+          }
+        .left-column {
+            width: 30%;
+            padding: 15px;
+            background-color: #f4f4f4;
+        }
+        .right-column {
+            width: 70%;
+            padding: 15px;
+        }
+        h1, h2, h3 {
+            margin: 0 0 5px;
+        }
+        h1 {
+            font-size: 20px;
+        }
+        h2 {
+            font-size: 16px;
+            color: #333;
+        }
+        h3 {
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+        ul {
+            margin: 0 0 5px;
+            padding-left: 15px;
+        }
+        .section {
+            margin-bottom: 10px;
+            page-break-inside: avoid;
+        }
+        .contact-info p {
+            margin: 3px 0;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 5px 0;
+        }
+        .footnote {
+                font-size: 8px;
+                color: #666;
+                text-align: center;
+                margin-top: 5px;
+                page-break-inside: avoid;
+        }
+        .work-experience ul {
+            margin-bottom: 3px;
+        }
+        .work-experience .job {
+            margin-bottom: 8px;
+            page-break-inside: avoid;
+        }
+        .work-experience p {
+            margin: 1px 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media print {
+            body {
+                margin: 0;
+                padding: 10px;
+            }
+            .container {
+                border: none;
+                width: 100%;
+                max-width: 900px;
+            }
+            .left-column {
+                background-color: #f4f4f4 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            a {
+                color: #0066cc; /* Keep blue color for links in PDF */
+                text-decoration: underline; /* Underline to indicate clickability */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <h1>Niraj Kumar</h1>
+            <hr>
+            
+            <div class="section contact-info">
+                <h2>Contact</h2>
+                <p>Email: niraj17@iitbombay.org</p>
+                <p>Phone: (+91) 9900651697</p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/niraj17" target="_blank">linkedin.com/in/niraj17</a></p>
+            </div>
+            <hr>
+            
+            <div class="section">
+                <h2>Education</h2>
+                <h3><a href=https://www.iitb.ac.in/>Indian Institute of Technology, Bombay</a></h3>
+                <p> B Tech, Graduated in July, 1999 </p>
+            </div>
+            <hr>
+            
+            <div class="section">
+                <h2>Core Skills</h2>
+                <ul>
+                    <li>Data Storage systems, Performance analysis, Filesystems, Linux kernel, Distributed Systems, Database
+</li>
+                    <li> <b>Programming Languages</b>: C/C++, Python, Java</li>
+                    <li><b>Tools</b>: Kubernets, Docker, Git, Perforce, ClearCase</li>
+                    <li>Team leadership and mentoring</li>
+                </ul>
+            </div>
+            <div class="section">
+               <h2>Invention</h2>
+
+                NetApp Invention Report for <i>“System   
+   and method to recommend best possible  
+   workload layout topology based on  
+   workload QoS and constraints, storage  
+   constraints and user constraints” </i>
+            </div>
+                     <div class="section">
+                <h2>Contributions to open source</h2>
+                 I have contributed to open source multiple times. Some examples:
+                <ul>
+                    <li>My contribution to Linux kernel is mentioned in the kernel source code (See <a href=https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/fs/ufs/super.c?h=v6.16.2#n61>fs/ufs/super.c</a>) </li>
+                    <li><a href=https://lwn.net/Articles/71667/> https://lwn.net/Articles/71667/ </a></li>
+                    <li><a href=https://lwn.net/Articles/310369/> https://lwn.net/Articles/310369/</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Right Column -->
+        <div class="right-column">
+            <div class="section">
+                <h2>Professional Summary</h2>
+                <p>A seasoned technical leader with 20+ years of experience in <b>system software development and performance</b> - specializing in data storage systems, operating systems and distributed systems. 
+                 
+
+<p> Indepth experience working on all parts of techology stack, from low level hardware to web browser.
+           <i> Open source software author and contributor to linux kernel. </i></p>
+
+            </div>
+            <hr>
+            
+            <div class="section work-experience">
+                <h2>Work Experience</h2>
+                (<i>Most recent, in reverse chronological order) </i>
+                <div class="job">
+                    <h3>DDN India, Bangalore (<i>Aug, 2018 - till date</i>)</h3>
+                    <ul>
+                        <li>  <b><a href=https://www.ddn.com/products/infinia/>Infinia</a> </b>- Working on development of discovery, cluster infrastruture and SDK of Infinia storage product, which is focussed on high performance AI workloads.</li>
+                        <li><b><a href=https://www.ddn.com/products/intelliflash/> Intelliflash </a> </b> - Working on core kernel changes and Clustering/HA</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3>Cisco, Bangalore (<i>June, 2016 - Aug, 2018</i>)</h3>
+                    <ul>
+                        <li><b><a href=https://www.cisco.com/site/us/en/products/networking/cloud-networking/application-centric-infrastructure/index.html>ACI development team</a></b>- Working with ACI (Application Centric Infrastructure) team on the APIC controller development. This
+ involves working on clustering, data partitioning and replication and other similar aspects of controller
+ development.
+                    Cisco ACI is the leading SDN in the industry and provides extensive integration with different
+ component in the datacenter, including support for Cloud and Virtualization (VMware and Redhat).
+                 </li>
+                </ul>
+                </div>
+                <div class="job">
+                     <h3>NetApp, Bangalore (<i>Aug, 2010 - June, 2016</i>)</h3>
+                     <ul>
+                        <li><b><a href=https://www.netapp.com/ontap-data-management-software/>Data ONTAP development and performance team</a></b> - Worked with multiple projects within ONTAP organization including :
+                            <ul>
+                                <li> <b>Storage modelling and layout</b>: Modelling storage system for a defined workload and to
+ recommend best possible workload layout topology based on workload constraints, storage
+ constraints and user provided constraints for clustered Data ONTAP.
+                                <li> <b>ActiveObject development</b> - a feature to find most active objects in storage system.
+                                <li> Storage QoS improvements 
+                                <li> <b>Storage efficiency team : Compression and DeDuplication in WAFL </b> 
+                                  - Performance impact of compression and deduplication,
+                                  Background Deduplication - impact of BG dedup on client performance.
+                            </ul>
+                       </li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3>IBM Rational, Bangalore (<i>Nov, 2006 - Aug, 2010</i>)</h3>
+                     <ul><b><a href=https://www.ibm.com/docs/en/clearcase/11.0.0?topic=views-multiversion-file-system> Multi Version File System Development</a> </b>
+                          worked on the development of MVFS (Multi Version File System) at IBM Rational. MVFS is a
+ component of ClearCase which plugs-in as a kernel module (kernel extension) on the underlying OS.
+ Supported platforms includes AIX, Linux, Solaris, Windows and HP-UX
+                    <ul>
+                        <li>  support for the new AIX virtualization environment, called WPAR (
+ Workload Partition)</li>
+                        <li> a userspace filesystem on Linux using FUSE framework to do filesystem auditing and "build
+avoidance".
+ <li> Worked on enabling ClearCase on  Cloud platform</li>
+                    </ul>
+                     </ul>
+                </div>
+                <div class="job">
+                     <h3> UGS, Pune, India (<i>Sep, 2005 - Nov, 2006</i>)</h3>
+                      <ul>
+                             <b>Temcenter Enterprise</b>: (TcEnt) is a PLM systems used by a number of automobile and
+ aircraft industry giants. TcEnt is a distributed application and is supported by Oracle database at the
+ back-end. The development is primarily done in C language and the database interface is using OCI (Oracle Call Interface). TcEnt communication
+ mechanism is based on an RPC layer which in turn is dependent on VC (Virtual Connection) layer. I
+ have been involved with several development projects :
+  <ul> 
+<li> <b>Oracle: OCI8 and CLOB support:</b> This
+ involves changing that interface to OCI8. Also, TcEnt uses LONG datatype for storing blob,
+ which are being changed to use the new CLOB datatype.
+ <li> <b>MS SQL 2005 support:</b> This project
+ involves adding support for SQL2005 on Windows. Here, lots of locking and transaction related
+ issues (involving snapshot isolation level) are being sorted out.
+ <li> <b>IPv6 support:</b> Providing support for IPv6 at rpc communication layer.
+  </ul>
+                      </ul>
+                </div>
+                <div class="job">
+                     <h3><a href=https://www.calsoftinc.com/>Calsoft</a>, Pune, India (<i>Jan, 2006 - Sep, 2005</i>)</h3>
+                      <ul>
+                     <b> Linux kernel performance and scalability</b>
+ I worked in a team (at CalSoft ) entrusted with the responsibility of increasing
+ the scalability of Linux kernel for big 
+NUMA machines. The overall idea of supporting NUMA
+ architecture is to make kernel aware of the topology of the machine and reduce 
+<b>False Sharing</b> in kernel
+ data structures. This involves designing and implementing NUMA aware memory management,
+ NUMA aware locks, per-cpu variables etc., among other things. This was done using a series of
+ patches to the linux kernel.
+                  </ul>
+            </div>
+             </div>
+            <hr>
+            
+   
+        </div>
+    </div>
+    <div class="footnote">
+        <p>Please see <a href=https://niraj17.github.io/niraj.html> https://niraj17.github.io/niraj.html </a> for the latest version of this document.
+</p>
+    </div>
+</body>
+</html>
