@@ -1,0 +1,18 @@
+- Prepare for domain knowledge: 
+     - RED Architecture, Intelliflash, Cisco
+     - NVMe basics and SPDK 
+      - Kubernetes and docker
+      - Design patterns - SOLID principle
+      - Distributed Systems:
+           https://github.com/theanalyst/awesome-distributed-systems?tab=readme-ov-file
+
+- Revise linux kernel, multi-threading etc.
+- Complete Naveen Garg videos
+- Complete 3 books by Alex Xu (Coding pattern, System Design 1 & 2)
+- Practice and complete 150 questions from neetcode
+
+
+- Brendan Gregg's book on performance !
+- Do basics of AI using PyTorch with book "Hands-On Machine Learning with Scikit-Learn and PyTorch"
+
+- Educative/AlgoMonster paid plan?
