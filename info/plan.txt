@@ -1,3 +1,5 @@
+Domain Expertise : Data Storage, Distributed Systems, Performance !
+
 - Prepare for domain knowledge: 
      - RED Architecture, Intelliflash, Cisco
      - NVMe basics and SPDK 
@@ -16,3 +18,45 @@
 - Do basics of AI using PyTorch with book "Hands-On Machine Learning with Scikit-Learn and PyTorch"
 
 - Educative/AlgoMonster paid plan?
+
+
+- Keywords: B-epsilon tree, Bloom-filter, Consistent hashing
+
+-----+ points to talk ----------
+DDN Infinia -  new arch, all userspace,  cluster, etcd, raft, consensus,             Key-value store, b-epsilon tree,         Discovery, CM/IM, SDK
+         FUSE/S3/custom sdk         (xAI in PoC mode)         
+Intelliflash - OpenSolaris, 2 node HA, Old  code, Resource Manager 
+                     nVMe namespace reservation 
+ACI - raft, sqlite, 3 node cluster 
+NetApp - SPM sizer, layout, invention report with KK (Gautam)Activeobject - Darren Sawer (weta digital), wp1miCompression/dedup (Kesri M, Xin Lee)(Minor) QoS - queuing theory (Naresh Patel, Phil Larson)
+IBM - mvfs
+Calsoft - Linux, NUMA, false sharing
+
+----- Performance analysis : methods ----
+  *** Bottleneck -   Hardware (CPU, Disk, network, IO-Controller, interconnect, Bridges etc) & Software (Algorithms, locks) ***
+
+- Problem statement - 
+          - Why do we think there is a problem? Was this ever problem-free? Anything changed recently?
+- Diagram  - component of the system
+- Workload characteristics
+- Resource analysis
+- USE method - Utilization, Saturation, Error (for both hardware and software)
+- Thread state analysis - runnable, waiting,  swapping, (scheduling issues?)
+- On CPU analysis - flame graph and cycles-per-instruction (CPI) ratio => (can indicate memory/cache issue (ex False Sharing?))
+- Latency histograms
+
+Tools:
+  - vmstat, iostat, sar, mpstat, (Hardware: mptutil, pciconf ) 
+  - dynamic tracing
+  - profiling (gprof) - (Terminology: CPU pathlength = CPU utilization/OP rate), 
+  - lockstat
+
+--- performance measurements and experiment design ----
+- Experiment - Steady state,  Repeatable
+- Collecting data - counters
+- Comparables - same hardware, version, feature enabled etc
+- Load generators - iozone, sfs (NetApp specific - perfstat, perfAnt? )
+
+
+
+- 
