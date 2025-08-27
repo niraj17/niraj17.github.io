@@ -23,12 +23,12 @@ Domain Expertise : Data Storage, Distributed Systems, Performance !
 - Keywords: B-epsilon tree, Bloom-filter, Consistent hashing
 
 -----+ points to talk ----------
-DDN Infinia -  new arch, all userspace,  cluster, etcd, raft, consensus,             Key-value store, b-epsilon tree,         Discovery, CM/IM, SDK
+DDN Infinia -  Done from scratch, similar to Amazon dynamo (added distributed lock manager for posix APIs) all userspace,  cluster, etcd, raft, consensus,             Key-value store, b-epsilon tree,         Discovery, CM/IM, SDK
          FUSE/S3/custom sdk         (xAI in PoC mode)         
 Intelliflash - OpenSolaris, 2 node HA, Old  code, Resource Manager 
                      nVMe namespace reservation 
 ACI - raft, sqlite, 3 node cluster 
-NetApp - SPM sizer, layout, invention report with KK (Gautam)Activeobject - Darren Sawer (weta digital), wp1miCompression/dedup (Kesri M, Xin Lee)(Minor) QoS - queuing theory (Naresh Patel, Phil Larson)
+NetApp - SPM sizer, layout, invention report with KK (Gautam)Activeobject - Darren Sawyer (weta digital), wp1miCompression/dedup (Kesri M, Xin Lee)(Minor) QoS - queuing theory (Naresh Patel, Phil Larson)
 IBM - mvfs
 Calsoft - Linux, NUMA, false sharing
 
@@ -57,6 +57,37 @@ Tools:
 - Comparables - same hardware, version, feature enabled etc
 - Load generators - iozone, sfs (NetApp specific - perfstat, perfAnt? )
 
+------ NetApp knowledge -----------
+DAS/SAN/NAS
+Protocol for data access - ?? Local (posix), NFS, CIFS,  ....object storage?? s3 protocol?
+ 
+Write Path - data put in NVRAM and memory of ctrl-A, copied to NVRAM of ctrl-B, then ack is sent to client.
+           - NVRAM is like a redo log 
+           - Once NVRAM limit is reached (half-full? or 10 seconds), data is flushed to disk (CP - consistency point)
+           - Every CP creates snapshot
+           - WAFL is write anywhere file layout -   (Others - Journaling, Log-structured, etc., B-epsilon tree based design)
+                   - Adv: Better write performance, Versioning, snapshot,  
+                   - Dis: Write amplification?
+           - ONTAP - msg passing architecture: better for concurrency? simplified code? less lock contention
+                    - slight performance overhead
+           - Controller crash - peer will take over aggregate and use NVRAM data 
 
 
-- 
+
+Read Path -  Check block cache/metadata cache (Caching strategy - write-through cache??)
+          - LRU Cache?
+
+Storage efficiency - Zero blocks, compression, dedup
+
+RAID - ??      (Erasure Coding?)
+Drive Type - Rotating vs SSD, readahead,
+             nVME protocol? (Alleviating disk protocol (scci? SATA?) bottleneck?)  
+
+
+
+Storage Tiering  - (Like Flash Cache with special hardware?)
+FlexVols and LUN - Thin provisioning 
+
+Recovery Point Objective (RPO) is the maximum amount of data, measured in time, that an organization can 
+   afford to lose after a disaster or system failure.
+- Synchronous vs Asynchronous mirroring
