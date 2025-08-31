@@ -4,14 +4,19 @@ Domain Expertise : Data Storage, Distributed Systems, Performance !
 TODO projects in Rust:
    - Cuckcoo filter (improvement over bloom filter)
    - Recently improved Dijkastra Algorithm
+   - RAFT consensus algorithm
 
-Overall - 1) Domain (work experience) knowledge questions
-          2) DSA Interview questions  (100 Dynamic programming questions for Google) - practice on laptop and paper
-          3) System design question - practice on paper
-          4) Behavioural Questions 
+
+Detailed Plan:
+      1) DSA - [Naveen Garg's lecture], Then books by Alex Xu (Coding pattern), 150 neetcode questions, 50 Dynamic programming question
+      2) Linux kernel and multithreading etc.
+      3) Domain (work experience) questions
+      4) System Design - 2 books by Alex Xu - Read additional papers/blog as mentioned there.
+            - Practice on paper
+      5) Behavioural Questions -
 
 ==========================================================
-- Prepare for domain knowledge: 
+- Prepare for domain knowledge:
      - RED Architecture, Intelliflash, Cisco
      - NVMe basics and SPDK 
       - Kubernetes and docker
@@ -19,12 +24,6 @@ Overall - 1) Domain (work experience) knowledge questions
       - Distributed Systems:
            https://github.com/theanalyst/awesome-distributed-systems?tab=readme-ov-file
            https://martin.kleppmann.com/2020/11/18/distributed-systems-and-elliptic-curves.html
-
-
-- Revise linux kernel, multi-threading etc.
-- Complete Naveen Garg videos
-- Complete 3 books by Alex Xu (Coding pattern, System Design 1 & 2)
-- Practice and complete 150 questions from neetcode
 
 
 - Brendan Gregg's book on performance !
@@ -35,7 +34,7 @@ Overall - 1) Domain (work experience) knowledge questions
 
 - Keywords: B-epsilon tree, Bloom-filter, Consistent hashing, Merkle Tree
 
------+ points to talk ----------
+-----+ Work Exp - points to talk ----------
 DDN Infinia -  Done from scratch, similar to Amazon dynamo (added distributed lock manager for posix APIs) 
              all userspace,  cluster, etcd, raft, consensus,  Key-value store, b-epsilon tree,         Discovery, CM/IM, SDK
                 FUSE/S3/custom sdk         (xAI in PoC mode) 
@@ -64,7 +63,7 @@ Calsoft - Linux, NUMA, false sharing
 - Latency histograms
 
 Tools:
-  - Linux tools: top, iostat, vmstat, sar, mpstat, (Hardware: mptutil, pciconf ) 
+  - Linux tools: top, iostat, vmstat, sar, mpstat, (Hardware: mptutil, pciconf) 
   - dynamic tracing
   - profiling (gprof) - (Terminology: CPU pathlength = CPU utilization/OP rate), 
   - lockstat
@@ -75,6 +74,9 @@ Tools:
 - Comparables - same hardware, version, feature enabled etc
 - Load generators - iozone, sfs (NetApp specific - perfstat, perfAnt? )
 
+
+Theory - Queuing Theory:  Little’s Law: L = λW  (L=average number of requests in a system, λ - average arrival rate, W - average wait time)
+
 ------ NetApp knowledge -----------
 DAS/SAN/NAS
 Protocol for data access - ?? Local (posix), NFS, CIFS,  ....object storage?? s3 protocol?
@@ -83,7 +85,7 @@ Write Path - data put in NVRAM and memory of ctrl-A, copied to NVRAM of ctrl-B, 
            - NVRAM is like a redo log 
            - Once NVRAM limit is reached (half-full? or 10 seconds), data is flushed to disk (CP - consistency point)
            - Every CP creates snapshot
-           - WAFL is write anywhere file layout -   (Others - Journaling, Log-structured, etc., B-epsilon tree based design)
+           - WAFL is write anywhere file layout -   (Others - Journaling, Log-structured, etc., B-epsilon tree based design) ("Soft update" in UFS?)
                    - Adv: Better write performance, Versioning, snapshot,  
                    - Dis: Write amplification?
            - ONTAP - msg passing architecture: better for concurrency? simplified code? less lock contention
@@ -92,7 +94,7 @@ Write Path - data put in NVRAM and memory of ctrl-A, copied to NVRAM of ctrl-B, 
 
 
 
-Read Path -  Check block cache/metadata cache (Caching strategy - write-through cache??)
+Read Path -  Check block cache/metadata cache (Caching strategy - write-through or write-back cache?)
           - LRU Cache?
 
 Storage efficiency - Zero blocks, compression, dedup
@@ -111,3 +113,9 @@ Recovery Point Objective (RPO) is the maximum amount of data, measured in time, 
 - Synchronous vs Asynchronous mirroring
 
 Other techniques for data reduction - Find similar block and then store differences - https://en.wikipedia.org/wiki/Fuzzy_hashing
+
+Compression - LZOpro (Adjustable Compression Levels, exceptionally fast decompression speed, less memory overhead, In-Place Decompression), 
+             
+              Zstd (Facebook) achieves better compression than LZO while maintaining a very fast decompression speed, similar to LZO's strength.
+                   - https://github.com/facebook/zstd
+              Weka (similarity)
