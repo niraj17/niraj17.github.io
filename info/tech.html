@@ -101,10 +101,11 @@
           <li> <b>Some key data structures:</b> <a href=https://en.wikipedia.org/wiki/Consistent_hashing>Consistent_hashing</a>, <a href=https://en.wikipedia.org/wiki/Bloom_filter>Bloom_filter</a>, <a href=https://en.wikipedia.org/wiki/Count%E2%80%93min_sketch>Count min sketch</a> , <a href=https://en.wikipedia.org/wiki/HyperLogLog>HyperLogLog</a>
           <li> <a href=https://martin.kleppmann.com/2020/11/18/distributed-systems-and-elliptic-curves.html>https://martin.kleppmann.com/2020/11/18/distributed-systems-and-elliptic-curves.html</a>
           <li> <a href=https://asktom.oracle.com/Misc/oramag/on-transaction-isolation-levels.html>Ask Tom: on-transaction-isolation-levels</a>
-	  <li> <b>Caching: </b>: <a href=https://codeahoy.com/2017/08/11/caching-strategies-and-how-to-choose-the-right-one/>caching-strategies</a>, <a href=https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf> Scaling memcache at Facebook</a>
+	  <li> <b>Caching: </b>: <a href=https://codeahoy.com/2017/08/11/caching-strategies-and-how-to-choose-the-right-one/>caching-strategies</a>, <a href=https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf> Scaling memcache at Facebook</a>, <a href=https://engineering.fb.com/2022/06/08/core-infra/cache-made-consistent/>cache-made-consistent</a>
           <li> <a href=https://highscalability.com/what-the-heck-are-you-actually-using-nosql-for/>what-the-heck-are-you-actually-using-nosql-for</a>
           <li> <a href=https://netflixtechblog.com/active-active-for-multi-regional-resiliency-c47719f6685b>active-active-for-multi-regional-resiliency</a>
           <li> <b>Rate Limiting:</b> <a href=https://gist.github.com/rponte/c610d391820a7fd28aee13ce879a87c8>Rate Limiting</a>
+
      </ul>
      </div>
 
@@ -113,20 +114,21 @@
       <h2>Concurrency, Multi-threading and Linux kernel</h2>
      <ul>
           <li> <a href=https://www.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html>Parallel Programming Book - Paul McKenney</a>
-          <li> <a href=https://www.youtube.com/watch?v=c1gO9aB9nbs>[YouTube] Lock Free Data structures</a>
-          <li> <b>ABA Problem:</b> <a href=https://en.wikipedia.org/wiki/ABA_problem>ABA problem</a>, <a href=https://www.stroustrup.com/isorc2010.pdf> ABA problem</a>, <a href=https://www.cs.rochester.edu/~scott/papers/1996_PODC_queues.pdf>Concurrent Queue Algorithms</a>
+          <li> <a href=https://www.youtube.com/watch?v=c1gO9aB9nbs>[YouTube] Lock Free Data structures</a>, <a href=https://www.youtube.com/watch?v=MgatrtcGH2U&list=PLn0nrSd4xjjZoaFwsTnmS1UFj3ob7gf7s&index=19> [YouTube] Non-blocking synchronization </a>
+          <li> <b>ABA Problem (Lock Free Data structures):</b> <a href=https://en.wikipedia.org/wiki/ABA_problem>ABA problem</a>, <a href=https://en.wikipedia.org/wiki/Hazard_pointer>Hazard_pointer</a> , <a href=https://www.stroustrup.com/isorc2010.pdf>ABA problem</a>, <a href=https://www.cs.rochester.edu/~scott/papers/1996_PODC_queues.pdf>Concurrent Queue Algorithms</a>
           <li> <a href=https://preshing.com/20120930/weak-vs-strong-memory-models/> weak-vs-strong-memory-models </a>
           <li> <a href=https://people.freebsd.org/~lstewart/articles/cpumemory.pdf> What every programmer should know about memory</a> (Another link: <a href=https://lwn.net/Articles/250967/> https://lwn.net/Articles/250967/</a>)
            <li> <a href=https://www.youtube.com/watch?v=WDIkqP4JbkE>[YouTube] CPU Caches and why you care</a>
            <li> <a href=https://www.akkadia.org/drepper/dsohowto.pdf>How to write shared library - Ulrich Drepper</a>
            <li> <a href=https://developers.redhat.com/articles/2023/04/12/why-you-should-use-iouring-network-io> io_uring </a>
-           <li> <b> Linux device drivers:</b><a href=https://lwn.net/Kernel/LDD3/>Linux Device Drivers book</a>, <a href=https://www.youtube.com/watch?v=AdPxeGHIZ74> [YouTube] GregKH on device driver</a>, 
+           <li> <b> Linux device drivers:</b><a href=https://lwn.net/Kernel/LDD3/>Linux Device Drivers book</a>, <a href=https://www.youtube.com/watch?v=AdPxeGHIZ74> [YouTube] GregKH on device driver</a>, <a href=https://chrizog.com/linux-device-driver-tutorial-ultrasonic-sensor-1>Driver tutorial</a>, 
            <li> <b> Synchronization in linux kernel</b> - <a href=https://www.kernel.org/doc/html/next/RCU/whatisRCU.html>What is RCU</a>, <a href=https://lwn.net/Articles/590243/>MCS Lock and qspinlocks</a>
 	   <li> <a href=https://lwn.net/Articles/633422/>Epoll evolving</a>
            <li> <a href=https://lwn.net/Articles/360699/>A futex overview</a>
            <li> <a href=https://www.kernel.org/doc/gorman/>Understanding the Linux virtual memory manager</a>
            <li> <a href=https://jeremymanson.blogspot.com/2007/08/atomicity-visibility-and-ordering.html>atomicity-visibility-and-ordering</a>
            <li> <a href=https://preshing.com/20120226/roll-your-own-lightweight-mutex/>roll-your-own-lightweight-mutex</a>
+           <li> <b>malloc:</b> <a href=https://engineering.fb.com/2011/01/03/core-infra/scalable-memory-allocation-using-jemalloc/>scalable-memory-allocation-using-jemalloc</a>, <a href=https://www.youtube.com/watch?v=RcWp5vwGlYU&list=PLn0nrSd4xjjZoaFwsTnmS1UFj3ob7gf7s> [YouTube] Jemalloc</a>,  
      </ul>
      </div>
          <div class="section">
